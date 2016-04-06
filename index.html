@@ -1,0 +1,149 @@
+<html lang="en" ng-app="SwApp" ng-controller="AppCtrl" ng-cloak>
+<head>
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="css/sw.css">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+    <link href="css/angular-tooltips.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body layout="row" class="layout-row">
+
+
+<md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
+            md-component-id="left"
+            md-is-locked-open="$mdMedia('gt-sm')"
+            style="color: greenyellow;"
+>
+    <div align="center"><a href="http://127.0.0.1:8080/#/"><img src="../img/logo.png" alt="Smiley face" ></a></div>
+    <!--
+   <header style="color: greenyellow;">
+       <h1 class="md-toolbar-tools"></h1>
+
+
+
+
+   </header>
+      <md-toolbar class="md-sidenav-left" style="color: greenyellow;">
+           <h1 class="md-toolbar-tools">Sidenav Left</h1>
+       </md-toolbar> layout-padding-->
+   <!-- <md-content class="menu-li-bg">-->
+        <md-button ng-click="close()" class="md-primary" hide-gt-sm>
+            Close Sidenav Left
+        </md-button>
+        <p hide-md show-gt-md>
+
+
+
+        <ul class="menu_text">
+
+            <li><a ui-sref="covered">Coverage Demo</a>
+            </li>
+            <li><a ui-sref="mons">Mons out</a>
+            </li>
+            <li><a ui-sref="db">Mons out - json</a>
+            </li>
+            <li><a ui-sref="template">Template</a>
+            </li>
+            <li><a ui-sref="new-qs({ monName: 'Randy' })">Template</a>
+            </li>
+            <li><a ui-sref="new-qs({ monName: 'Chow' })">Template</a>
+            </li>
+        </ul>
+        <!--
+       <div ng-include='"templates/header.html"'></div>
+
+             <div ng-include='"templates/footer.html"'></div>
+       -->
+
+
+        </p>
+    <!--</md-content>-->
+</md-sidenav>
+
+
+
+<!--
+  Your HTML content here
+-->
+
+<div layout="column" tabIndex="-1" role="main" class="layout-column gray-bg" flex>
+
+    <md-toolbar class="site-content-toolbar md-whiteframe-glow-z1">
+        <div class="md-toolbar-tools">
+            <md-button aria-label="Settings"
+                       class="md-icon-button md-button md-ink-ripple hide-gt-sm"
+                       ng-click="toggleLeft()">
+                <md-icon md-svg-src="img/icons/menu.svg"></md-icon>
+
+            </md-button>
+            <h2>
+                <span>Url: <a href="http://127.0.0.1:8080/#/">Home</a> {{ $location.url() }}</span>
+            </h2>
+            <span flex></span>
+            <md-button class="md-icon-button" aria-label="Favorite" href="#/faq">
+                <md-tooltip md-autohide>Green Heart</md-tooltip>
+                <md-icon md-svg-src="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
+
+            </md-button>
+
+            <md-button class="md-icon-button" aria-label="Favorite" href="#/faq">
+                <md-tooltip md-autohide>Green Heart</md-tooltip>
+                <md-icon md-svg-src="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
+
+            </md-button>
+
+            <md-button class="md-icon-button" aria-label="More">
+                <md-icon md-svg-src="img/icons/more_vert.svg"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+
+    <md-content class="layout-column flex">
+
+
+        <br>
+
+
+        <div layout="column">
+            <div class="doc-demo-content doc-content">
+                <pre></pre>
+                <div ui-view></div>
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </md-content>
+
+
+    <br>
+
+
+
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    <script src="js/sw.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+
+    <!-- Your application bootstrap  -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.8/angular-filter.min.js"></script>
+    <script src="js/angular-tooltips.min.js"></script>
+
+
+</div>
+</body>
+</html>

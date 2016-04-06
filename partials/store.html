@@ -1,0 +1,186 @@
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+
+
+.config(['$routeProvider', function ($routeProvider) {
+$routeProvider
+// Home
+.when("/", {templateUrl: "partials/home.html", controller: "PageCtrl"})
+// Pages
+.when("/about", {templateUrl: "partials/about.html", controller: "PageCtrl"})
+.when("/faq", {templateUrl: "partials/mon_out.php", controller: "PageCtrl"})
+.when("/covered", {templateUrl: "partials/covered.html", controller: "PageCtrl"})
+// .when("/services", {templateUrl: "partials/services.php", controller: "PageCtrl"})
+
+
+/*.when('/partials/services.php?mon=:id', {
+templateUrl: 'partials/services.php',
+controller: 'RouteController'
+})
+
+function RouteController($scope, $routeParams) {
+$scope.templateUrl = 'partials/services.php'+$routeParams.id+'/.php';
+}*/
+
+.when("/mon:id", {
+controller: 'PageCtrl',
+templateUrl: function($routeParams) {
+return 'partials/services.php' + $routeParams.id;
+}
+
+})
+
+.when("/contact", {templateUrl: "partials/contact.html", controller: "PageCtrl"})
+// Blog
+.when("/blog", {templateUrl: "partials/blog.html", controller: "BlogCtrl"})
+.when("/blog/post", {templateUrl: "partials/blog_item.html", controller: "BlogCtrl"})
+// else 404
+.otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
+}])
+
+
+
+echo "<div>";
+    echo "<ul>" ;
+        while($row = mysqli_fetch_array($result))
+        {
+
+        echo    "<li>". $row['Awakened'] . "</li>";
+
+        echo    "<li>" . $row['Name'] . "</li>";
+
+        echo    "<li>" . $row['Stars'] . "</li>";
+
+        echo    "<li>" . $row['Attribute'] . "</li>";
+
+        }
+
+        echo        "</ul>";
+    echo      "</div>";
+
+<!--<md-content flex layout-padding>
+  <div layout="column" layout-fill layout-align="top center">
+    <p>
+      The left sidenav will 'lock open' on a medium (>=960px wide) device.
+    </p>
+    <p>
+      The right sidenav will focus on a specific child element.
+    </p>
+    <div>
+      <md-button ng-click="toggleLeft()"
+                 class="md-primary" hide-gt-md>
+        Toggle left
+      </md-button>
+    </div>
+    <div>
+      <md-button ng-click="toggleRight()"
+                 ng-hide="isOpenRight()"
+                 class="md-primary">
+        Toggle right
+      </md-button>
+    </div>
+  </div>
+  <div flex></div>
+</md-content>-->
+
+
+<!-- <section class="demo-container md-whiteframe-z1"
+              style="
+margin-top: 0px;
+padding-top: 8px;
+">
+         <span></span>
+         <md-card>
+             <md-card-title>
+                 <md-card-title-text>
+                     <span class="md-headline">Card with image</span>
+                     <span class="md-subhead">Large</span>
+                 </md-card-title-text>
+                 <md-card-title-media>
+                     <div class="md-media-lg card-media"></div>
+                 </md-card-title-media>
+             </md-card-title>
+             <md-card-actions layout="row" layout-align="end center">
+                 <md-button>Action 1</md-button>
+                 <md-button>Action 2</md-button>
+             </md-card-actions>
+         </md-card>
+         <br>
+         <ul>
+             <li>Coffee</li>
+             <li>Tea</li>
+             <li>Milk</li>
+         </ul>
+         <br>
+
+
+     </section>-->
+
+<div class="navbar-header">
+
+</div>
+
+// SQL TID BITS
+
+$name = $mysqli->query("SELECT name FROM contacts WHERE id = 5")->fetch_object()->name;
+
+$result = mysqli_query($con,"SELECT DISTINCT Attribute FROM mon_table WHERE Attribute = 'Fire'");
+
+SELECT DISTINCT City FROM Customers;
+
+$Awakened = $_POST["Awakened"];
+$Awakened = $_POST["Name"];
+$Awakened = $_POST["Stars"];
+$Awakened = $_POST["Attribute"];
+
+echo  "<span>""</span>";
+
+
+/** DEFAULT ngRoute
+
+
+var app = angular.module('spaApp', [
+'ngRoute'
+]);
+
+
+* Configure the Routes
+
+app.config(['$routeProvider', function ($routeProvider) {
+$routeProvider
+// Home
+.when("/", {templateUrl: "partials/home.html", controller: "PageCtrl"})
+// Pages
+.when("/about", {templateUrl: "partials/about.html", controller: "PageCtrl"})
+.when("/faq", {templateUrl: "partials/faq.html", controller: "PageCtrl"})
+.when("/pricing", {templateUrl: "partials/pricing.html", controller: "PageCtrl"})
+.when("/services", {templateUrl: "partials/services.html", controller: "PageCtrl"})
+.when("/contact", {templateUrl: "partials/contact.html", controller: "PageCtrl"})
+// Blog
+.when("/blog", {templateUrl: "partials/blog.html", controller: "BlogCtrl"})
+.when("/blog/post", {templateUrl: "partials/blog_item.html", controller: "BlogCtrl"})
+// else 404
+.otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
+}]);
+*/
+
+
+
+/**
+* Controls the Blog
+*/
+.controller('BlogCtrl', function (/* $scope, $location, $http */) {
+console.log("Blog Controller reporting for duty.");
+})
+
+/**
+* Controls all other Pages
+*/
+.controller('PageCtrl', function (/* $scope, $location, $http */) {
+console.log("Page Controller reporting for duty.");
+
+// Activates the Carousel
+//    $('.carousel').carousel({
+//       interval: 5000
+//    });

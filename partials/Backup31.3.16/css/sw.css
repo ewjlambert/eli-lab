@@ -1,0 +1,327 @@
+.toolbardemoBasicUsage .md-toolbar .md-icon .md-default-theme {
+    color: white; }
+
+
+.site-content-toolbar {
+    background: #f6f6f6 !important;
+    color: #666 !important;
+    z-index: 3;
+}
+
+.md-whiteframe-glow-z1 {
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 0px 2px 2px rgba(0, 0, 0, 0.098),
+    0px 0px 5px 1px rgba(0, 0, 0, 0.084);
+}
+
+
+.carddemoBasicUsage .card-media {
+    background-color: #999999; }
+
+.demo-container {
+    border-radius: 4px;
+    margin-bottom: 16px;
+    -webkit-transition: 0.02s padding cubic-bezier(0.35, 0, 0.25, 1);
+    transition: 0.02s padding cubic-bezier(0.35, 0, 0.25, 1);
+    position: relative;
+    padding-bottom: 0;
+}
+
+.doc-demo-content {
+    padding: 0;
+    margin: 16px;
+}
+.docs-demo .doc-demo-content {
+    margin: 40px;
+    padding: 0;
+}
+
+
+/* Start menu from demo site */
+
+.site-sidenav {
+    /*background: #106CC8; #14B9FF*/
+    /*background: greenyellow; #488bf4*/
+    background: #14B9FF;
+
+
+}
+.site-sidenav md-content {
+    background: transparent;
+}
+.site-sidenav,
+.site-sidenav.md-locked-open-add-active,
+.site-sidenav.md-locked-open {
+    width:     200px;
+    min-width: 200px;
+    max-width: 300px;
+    min-height: 100%;
+}
+/*.site-sidenav > * {
+    min-width: 218px;
+}*/
+
+.docs-menu,
+.docs-menu ul {
+    list-style: none;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.docs-menu li {
+    margin: 0;
+}
+.docs-menu > li:nth-child(1) {
+    border-top: none;
+}
+.md-whiteframe-glow-z1 {
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 0px 2px 2px rgba(0, 0, 0, 0.098),
+    0px 0px 5px 1px rgba(0, 0, 0, 0.084);
+}
+.docs-menu > li {
+    border-bottom: 1px solid #267ED5;
+}
+
+.docs-menu .md-button {
+    border-radius: 0;
+    color: white;
+    cursor: pointer;
+    display: block;
+    align-items: inherit;
+    line-height: 40px;
+    margin: 0;
+    max-height: 40px;
+    overflow: hidden;
+    padding: 0px 16px;
+    text-align: left;
+    text-decoration: none;
+    white-space: normal;
+    width: 100%;
+}
+.docs-menu .md-button:hover,
+.docs-menu .md-button:focus {
+    background: #267ED5 !important;
+}
+.docs-menu .md-button .md-icon {
+    color: white;
+}
+
+.docs-menu .md-select {
+
+    /* Override md-select margins.  With margins the menu will look incorrect and causes mobile list
+       to not be scrollable.
+     */
+    margin: 0;
+    width: 100%;
+}
+
+.docs-menu .md-select .md-select-label {
+    justify-content: flex-end;
+    padding-top: 10px;
+}
+
+.docs-menu md-select md-select-label span {
+    margin-right: auto;
+    padding-left: 13px;
+}
+
+.docs-menu md-select .md-select-icon {
+    margin-right: 28px;
+}
+
+.docs-menu button.md-button::-moz-focus-inner {
+    padding: 0;
+}
+.docs-menu .md-button.active {
+    background: #267ED5;
+}
+.menu-heading {
+    display: block;
+    line-height: 32px;
+    margin: 0;
+    padding: 8px 16px 0;
+    text-align: left;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.54)
+}
+.docs-menu li.parentActive,
+.docs-menu li.parentActive .menu-toggle-list {
+    /*background-color: #2C80D2 !important;*/
+}
+.menu-toggle-list {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    -webkit-transition: 0.75s cubic-bezier(0.35, 0, 0.25, 1);
+    -webkit-transition-property: height;
+    -moz-transition: 0.75s cubic-bezier(0.35, 0, 0.25, 1);
+    -moz-transition-property: height;
+    transition: 0.75s cubic-bezier(0.35, 0, 0.25, 1);
+    transition-property: height;
+}
+.docs-menu .menu-toggle-list a.md-button {
+    display: block;
+    padding: 0 16px 0 32px;
+    text-transform: none;
+    text-rendering: optimizeLegibility;
+    font-weight: 500;
+}
+
+.parent-list-item:last-child {
+    margin-bottom: 20px;
+
+    /* Prevent the hidden License link from causing a double bottom-border */
+    border-bottom: none;
+}
+.md-button-toggle .md-toggle-icon {
+    display: block;
+    margin-left: auto;
+    speak: none;
+    vertical-align: middle;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+}
+.md-button-toggle .md-toggle-icon.toggled {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+}
+
+/* End Docs Menu */
+
+.gray-bg {
+    background: #f6f6f6;
+}
+
+.menu_text {
+    color: #ffffff
+}
+
+/* unvisited link */
+a:link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #ffffff;
+}
+
+/* mouse over link */
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.title-main {
+     text-align: center;
+     font-weight: lighter;
+     font-size: 30pt;
+     color: #b5b5b5;
+ }
+
+.title-mid {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 20pt;
+    color: #b5b5b5;
+}
+
+.col {
+    border: 0px black solid;
+    padding: 15px;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+    -webkit-column-rule: 1px solid lightgrey;
+    -moz-column-rule: 1px solid lightgrey;
+    column-rule: 1px solid lightgrey;
+}
+
+.dl--horizontal, .dl--inline, .dl--inline-centered, .dl--inline-wrap {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mdl-data-table thead {
+    padding-bottom: 3px; }
+.mdl-data-table thead .mdl-data-table__select {
+    margin-top: 0; }
+.mdl-data-table tbody tr {
+    position: relative;
+    height: 48px;
+    transition-duration: 0.28s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color; }
+.mdl-data-table tbody tr.is-selected {
+    background-color: #e0e0e0; }
+.mdl-data-table tbody tr:hover {
+    background-color: #eeeeee; }
+.mdl-data-table td, .mdl-data-table th {
+    padding: 0 18px 12px 18px;
+    text-align: right; }
+.mdl-data-table td:first-of-type, .mdl-data-table th:first-of-type {
+    padding-left: 24px; }
+.mdl-data-table td:last-of-type, .mdl-data-table th:last-of-type {
+    padding-right: 24px; }
+.mdl-data-table td {
+    position: relative;
+    vertical-align: middle;
+    height: 48px;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    border-bottom: 0px solid rgba(0, 0, 0, 0.12);
+    padding-top: 12px;
+    box-sizing: border-box; }
+.mdl-data-table td .mdl-data-table__select {
+    vertical-align: middle; }
+.mdl-data-table th {
+    position: relative;
+    vertical-align: bottom;
+    text-overflow: ellipsis;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    letter-spacing: 0;
+    height: 48px;
+    color: rgba(0, 0, 0, 0.54);
+    padding-bottom: 8px;
+    box-sizing: border-box; }
+.mdl-data-table th.mdl-data-table__header--sorted-ascending, .mdl-data-table th.mdl-data-table__header--sorted-descending {
+    color: rgba(0, 0, 0, 0.87); }
+.mdl-data-table th.mdl-data-table__header--sorted-ascending:before, .mdl-data-table th.mdl-data-table__header--sorted-descending:before {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    word-wrap: normal;
+    -moz-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+    content: "\e5d8";
+    margin-right: 5px;
+    vertical-align: sub; }
+.mdl-data-table th.mdl-data-table__header--sorted-ascending:hover, .mdl-data-table th.mdl-data-table__header--sorted-descending:hover {
+    cursor: pointer; }
+.mdl-data-table th.mdl-data-table__header--sorted-ascending:hover:before, .mdl-data-table th.mdl-data-table__header--sorted-descending:hover:before {
+    color: rgba(0, 0, 0, 0.26); }
+.mdl-data-table th.mdl-data-table__header--sorted-descending:before {
+    content: "\e5db"; }
+
+.mdl-data-table__select {
+    width: 16px; }
+
+.mdl-data-table__cell--non-numeric.mdl-data-table__cell--non-numeric {
+    text-align: left; }

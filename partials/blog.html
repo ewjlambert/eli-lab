@@ -1,0 +1,30 @@
+<div class="container">
+
+    <table ng-controller="projectsController" class="mdl-data-table">
+
+        <thead><tr><th>Awakended Name</th><th>Type</th><th>Base Stars</th><th>Attribute</th></tr></thead>
+
+        <tbody>
+        <input class="md-input" ng-model="search" placeholder="Mon Search"/>
+        <tr ng-repeat="project in projects | searchField: 'Stars': 'Name' | filter: search" ng-click="reportClick()" ui-sref="new-qs({ monName: project.Awakened })">
+
+            <td>{{project.Awakened}}</td>
+
+            <td >{{project.Name}}</td>
+
+            <td>{{project.Stars}}</td>
+
+            <td>{{project.Attribute}}</td>
+
+            <!-- <td> <div ng-if="project.Type == 'Fire'"> <span class='label label-primary'>{{project.Attribute}}</span> </div> <div ng-if="project.Stars == '5'"> <span class='label label-info'>{{project.stars}}</span></div></td>
+
+ filterBy: ['Attribute']: 'Fire'
+filterBy: ['id']: 1
+<a ui-sref="new-qs({ monName: project.Awakened })"></a>
+ -->
+ </tr>
+
+ </tbody> </table>
+
+ </div>
+ <!-- /.container -->

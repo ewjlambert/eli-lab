@@ -1,0 +1,137 @@
+<br>
+
+<section ng-controller="projectsController" class="demo-container md-whiteframe-z1"
+         style="
+    margin-top: 0px;
+    padding-top: 8px;
+
+">
+
+    <p class="title-main" ng-repeat="project in projects | filterBy: ['Awakened']: monName">{{project.Awakened}} </p>
+
+
+    <p class="title-mid eli-blue" ng-repeat="project in projects | filterBy: ['Awakened']: monName">{{project.Attribute}} {{project.Name}}</p>
+        <div class="col">
+
+
+    </div>
+
+
+
+
+    Adding to monName Id: {{ monName }}
+
+    <div layout="row" style="margin-bottom:30px; padding: 15px;" layout-wrap="" class="layout-wrap layout-row" ng-repeat="project in projects | filterBy: ['Awakened']: monName">
+        <div flex-gt-xs="33" flex-xs="100" style="margin-bottom:15px;" class="flex-xs-100 flex-gt-xs-33">
+            <label>
+                Vitals {{project.Awakened}}
+            </label>
+            <div class="margin-top-10 pad-right-35">
+                <md-divider></md-divider>
+                <div layout-wrap="" layout="row" class="margin-top-10 margin-bottom-10 layout-wrap layout-row">
+                    <label flex="33" flex-xs="100" class="flex-xs-100 flex-33">
+                        Must 6 Star?
+                    </label>
+                    <label flex="33" flex-xs="100" class="eli-blue ng-binding flex-xs-100 flex-33" tooltips tooltip-side="Right" tooltip-template="tooltdip">
+                        {{project.worth_6}}
+
+                    </label>
+
+                </div>
+                <div layout-wrap="" layout="row" class="margin-bottom-10 layout-wrap layout-row">
+                    <label flex="33" flex-xs="100" class="flex-xs-100 flex-33">
+                        Must Have?
+
+                    </label>
+
+                    <label flex="33" flex-xs="100" class="eli-blue ng-binding ng-scope flex-xs-100 flex-33">
+                        {{project.Must_Have}}
+
+                </label>
+                </div>
+                <div layout-wrap="" layout="row" class="margin-bottom-10 layout-wrap layout-row">
+                    <label flex="33" flex-xs="100" class="flex-xs-100 flex-33">
+                       Food?
+                    </label>
+
+                    <label flex="66" flex-xs="100" class="eli-blue ng-binding ng-scope flex-xs-100 flex-66">
+                        {{project.Food}}
+                </label>
+                </div>
+            </div>
+        </div>
+        <div flex-gt-xs="33" flex-xs="100" class="margin-bottom-15 flex-xs-100 flex-gt-xs-33">
+            <label>
+                Dungeons
+            </label>
+            <div class="pad-right-35 margin-top-10">
+                <md-divider></md-divider>
+                <div layout-wrap="" layout="row" class="margin-top-10 margin-bottom-10 layout-wrap layout-row">
+                    <label flex="33" flex-xs="100" class="flex-xs-100 flex-33">
+                        Giants
+                    </label>
+                    <label flex="66" flex-xs="100" class="eli-blue ng-binding flex-xs-100 flex-66">
+                        {{project.G}} / 5
+                    </label>
+                </div>
+                <div layout-wrap="" layout="row" class="margin-bottom-10 layout-wrap layout-row">
+                    <label flex="33" flex-xs="100" class="flex-xs-100 flex-33">
+                        Dragons
+                    </label>
+                    <label flex="66" flex-xs="100" class="eli-blue ng-binding flex-xs-100 flex-66">
+                        {{project.D}} / 5
+                    </label>
+                </div>
+                <div layout-wrap="" layout="row" class="margin-bottom-10 layout-wrap layout-row">
+                    <label flex="33" flex-xs="100" class="flex-xs-100 flex-33">
+                        Nexus
+                    </label>
+                    <label flex="66" flex-xs="100" class="eli-blue ng-binding flex-xs-100 flex-66">
+                        {{project.N}} / 5
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div flex-gt-xs="33" flex-xs="100" class="margin-bottom-15 flex-xs-100 flex-gt-xs-33">
+            <label>
+                PvP
+            </label>
+            <div class="pad-right-35 margin-top-10">
+                <md-divider></md-divider>
+                <div layout-wrap="" layout="row" class="margin-top-10 margin-bottom-10 layout-wrap layout-row">
+                    <label flex="33" flex-xs="100" class="flex-xs-100 flex-33">
+                        Arena O
+                    </label>
+
+                    <label flex="66" flex-xs="100" class="eli-blue ng-binding ng-scope flex-xs-100 flex-66">
+                        {{project.AO}} / 5
+                    </label>
+                </div>
+                <div layout-wrap="" layout="row" class="margin-bottom-10 layout-wrap layout-row">
+                    <label flex="33" flex-xs="100" class="flex-xs-100 flex-33">
+                        Arena D
+                    </label>
+                    <label flex="66" flex-xs="100" class="eli-blue ng-binding flex-xs-100 flex-66">
+                        {{project.AD}} / 5
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+<!-- /.container  filterBy: ['user.first_name']: 'John'
+ <p class="title-mid"><a ui-sref="mons">Coverage Demo</a></p>
+filterBy: ['Awakened']: 'Randy'
+
+ <div ng-repeat="project in projects | searchField: 'Stars': 'Name' | filter: search">
+
+ <ul>
+        <li ng-repeat="project in projects | filterBy: ['Awakened']: 'Randy'">
+
+            {{project.Awakened}}  {{project.Stars}} {{project.worth_6}} {{project.Must_Have}} {{project.Food}}</li>
+</ul>
+
+-->
+
