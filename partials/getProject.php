@@ -1,8 +1,6 @@
 <?php
 
-// require_once '/conn.php';
-
-$mysqli=mysqli_connect("localhost:3306","mons","020408dcm","mons");
+require_once '../conn.php';
 
 // The mysql database connection script
 
